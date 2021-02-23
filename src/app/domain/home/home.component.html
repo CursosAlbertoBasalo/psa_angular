@@ -1,1 +1,8 @@
-<p>home works!</p>
+<app-categories
+                *ngIf="categories$ | async as categories"
+                [categories]="categories">
+</app-categories>
+<app-items
+           *ngIf="items$ | async as items"
+           [items]="items">
+</app-items>

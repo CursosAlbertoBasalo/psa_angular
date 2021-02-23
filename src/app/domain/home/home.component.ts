@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HomeService } from './data/home.service';
 
 @Component({
@@ -6,8 +6,9 @@ import { HomeService } from './data/home.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit {
-  constructor(private service: HomeService) {}
+export class HomeComponent {
+  categories$ = this.service.getCategories$();
+  items$ = this.service.getItems$();
 
-  ngOnInit(): void {}
+  constructor(private service: HomeService) {}
 }

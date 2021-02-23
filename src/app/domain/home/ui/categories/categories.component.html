@@ -1,1 +1,3 @@
-<p>categories works!</p>
+<app-card *ngFor="let category of categories "
+          [props]="{ title: category.name, description: category.description }">
+</app-card>
