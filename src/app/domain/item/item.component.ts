@@ -26,7 +26,7 @@ export class ItemComponent {
     this.item$ = route.params.pipe(
       filter((params) => params.id !== null),
       map((param) => param['id']),
-      switchMap((id) => service.getItemById$(id)),
+
       switchMap((id) => service.getItemById$(id))
     );
   }

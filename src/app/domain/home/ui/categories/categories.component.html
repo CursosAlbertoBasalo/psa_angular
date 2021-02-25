@@ -1,3 +1,6 @@
-<app-card *ngFor="let category of categories "
-          [props]="{ title: category.name, description: category.description }">
-</app-card>
+<h1>Categories</h1>
+<section>
+  <app-card *ngFor="let category of categories "
+            [props]="{ title: category.name, description: category.description }">
+  </app-card>
+</section>

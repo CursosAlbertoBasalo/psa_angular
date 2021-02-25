@@ -1,3 +1,6 @@
-<app-card *ngFor="let item of items "
-          [props]="{ title: item.name, description: item.description, link: './item/' + item.id }">
-</app-card>
+<h1>Featured Items</h1>
+<section>
+  <app-card *ngFor="let item of items "
+            [props]="{ title: item.name, description: item.description, link: './item/' + item.id }">
+  </app-card>
+</section>
