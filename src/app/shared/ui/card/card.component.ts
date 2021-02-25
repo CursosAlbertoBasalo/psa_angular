@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent {
-  @Input() props = { title: '', description: '' };
+  @Input() props = { title: '', description: '', link: '' };
 }

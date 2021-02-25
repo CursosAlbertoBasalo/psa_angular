@@ -2,6 +2,10 @@
   <a routerLink="/">
     <h1>Angular Builders Catalog</h1>
   </a>
+  <span *ngIf="loading$ | async as loadingState">
+    <span *ngIf="loadingState.loading">Cargando...</span>
+    <span *ngIf="loadingState.errorMessage">{{ loadingState.errorMessage }}!!!</span>
+  </span>
 </header>
 <main>
   <router-outlet></router-outlet>

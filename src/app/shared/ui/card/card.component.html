@@ -1,6 +1,8 @@
 <article>
   <header>
-    <h3>{{ props.title }}</h3>
+    <a [routerLink]="[props.link]">
+      <h3>{{ props.title }}</h3>
+    </a>
   </header>
   <main>
     <p>{{ props.description }}</p>
